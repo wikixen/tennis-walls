@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Settings = () => {
+const Rally = () => {
   return (
     <View>
-      <Text>Settings</Text>
+      <Text>Rally</Text>
     </View>
   )
 }
 
-export default Settings
+export default Rally
 
 const styles = StyleSheet.create({})

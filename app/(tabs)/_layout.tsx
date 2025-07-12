@@ -1,12 +1,17 @@
 import { Colors } from '@/constants/colors';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Tabs } from 'expo-router';
-import { StyleSheet } from 'react-native';
 
 const TabLayout = () => {
   return (
     <Tabs
-      screenOptions={{ tabBarActiveTintColor: Colors.navTint}}
+      screenOptions={{
+        tabBarActiveTintColor: Colors.navTint,
+        headerStyle: { backgroundColor: Colors.navBg },
+        headerTintColor: Colors.text,
+        tabBarStyle: { backgroundColor: Colors.navBg },
+        sceneStyle: { backgroundColor: Colors.bg },
+      }}
     >
       <Tabs.Screen
         name='index'
@@ -14,7 +19,7 @@ const TabLayout = () => {
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "home" : "home-outline"}
+              name={focused ? "home-sharp" : "home-outline"}
               color={color}
               size={24}
             />
@@ -22,15 +27,25 @@ const TabLayout = () => {
         }}
       />
       <Tabs.Screen
-        
-      />
-      <Tabs.Screen
-        name='settings'
+        name='rally'
         options={{
-          title: "Settings",
+          title: "Rally",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "settings" : "settings-outline"}
+              name={focused ? "people" : "people-outline"}
+              color={color}
+              size={24}
+            />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name='settings/index'
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              name={focused ? "person-circle" : "person-circle-outline"}
               color={color}
               size={24}
             />
@@ -42,5 +57,3 @@ const TabLayout = () => {
 }
 
 export default TabLayout
-
-const styles = StyleSheet.create({})

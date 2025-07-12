@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 
-const Index = () => {
+const Card = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Card</Text>
     </View>
   )
 }
 
-export default Index
+export default Card
 
 const styles = StyleSheet.create({})
